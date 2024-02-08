@@ -4,7 +4,7 @@ name: Node.js Package
 on:
   workflow_dispatch:
 
-  
+
 
 
 jobs:
@@ -28,7 +28,8 @@ jobs:
          node-version: 16
          # reposiroty url is npm not github
          registry-url: https://registry.npmjs.org/
-     - run: npm ci
+     - run: rm -rf package-lock.json node_modules
+     - run: npm install
      - run: npm run build
      - run: npm publish
        env:
