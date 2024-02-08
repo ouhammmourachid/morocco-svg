@@ -19,6 +19,11 @@ jobs:
     - name: Install dependencies
       run: npm install
       
+    - name: Set Git user information
+      run: |
+        git config --global user.email "rachidouhammou21@gamil.com"
+        git config --global user.name "ouhammmourachid"
+      
     - name: Bump version
       run: npm version patch
       
