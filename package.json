@@ -1,6 +1,6 @@
 {
   "name": "morocco-svg",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "description": "",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
