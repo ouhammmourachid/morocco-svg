@@ -76,8 +76,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
-        run: ls -all
-        run: ls .. -all
+      - name: List files
+        run: ls -all && ls .. -all
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
