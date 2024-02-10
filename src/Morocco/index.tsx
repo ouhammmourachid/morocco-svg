@@ -19,7 +19,7 @@ export function Morocco() {
                     <path
                         key={index}
                         d={path.d}
-                        fill={isHovered ? "#FF0000" : "#000000"}
+                        fill={isHovered ? "#FF0000" : path.fill}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                     />)
