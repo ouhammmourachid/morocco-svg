@@ -2,8 +2,8 @@
 name: Deploy Morocco SVG Map Docs
 
 on:
-  # push:
-  #   branches: ["main"]
+  push:
+    branches: ["main"]
 
   workflow_dispatch:
 
