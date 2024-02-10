@@ -10,6 +10,12 @@ export function Morocco() {
         setTooltip({x: event.clientX, y: event.clientY, name: name});
     };
 
+    const handleMouseMove = (event: React.MouseEvent<SVGPathElement>) => {
+        if (tooltip) {
+            setTooltip({x: event.clientX, y: event.clientY, name: tooltip.name});
+        }
+    };
+
     const handleMouseLeave = () => {
         setHoveredIndex(null);
         setTooltip(null);
@@ -25,6 +31,7 @@ export function Morocco() {
                             d={path.d}
                             fill={hoveredIndex === index ? "#FF0000" : path.fill}
                             onMouseEnter={(event) => handleMouseEnter(index, event, path.name)}
+                            onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             stroke="white"
                         />)
