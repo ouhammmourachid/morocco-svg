@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import paths from './map';
 
 export function Morocco() {
-    const [isHovered, setIsHovered] = useState(false);
+    const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    const handleMouseEnter = () => {
-        setIsHovered(true);
+    const handleMouseEnter = (index: any) => {
+        setHoveredIndex(index);
     };
 
     const handleMouseLeave = () => {
-        setIsHovered(false);
+        setHoveredIndex(null);
     };
 
     return(
@@ -19,13 +19,15 @@ export function Morocco() {
                     <path
                         key={index}
                         d={path.d}
-                        fill={isHovered ? "#FF0000" : path.fill}
-                        onMouseEnter={handleMouseEnter}
+                        fill={hoveredIndex === index ? "#FF0000" : path.fill}
+                        onMouseEnter={() => handleMouseEnter(index)}
                         onMouseLeave={handleMouseLeave}
+                        stroke="white"
+                        strokeWidth="1.01438"
+                        stroke-linejoin="round"
                     />)
-                )
-            }
-            )}
+                );
+            })}
         </svg>
     )
 }
