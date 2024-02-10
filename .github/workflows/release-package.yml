@@ -1,4 +1,4 @@
-name: Node.js Package
+name: deploy morocco-svg to npm
 
 # make this work flow manualy tragable
 on:
@@ -8,26 +8,27 @@ on:
 
 
 jobs:
- build:
+ test-morocco-svg:
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v3
      - uses: actions/setup-node@v3
        with:
-         node-version: 16
+         node-version: 20
      - run: npm ci
      - run: npm test
 
- publish-npm:
+ deploy-npm:
    needs: build
    runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v3
      - uses: actions/setup-node@v3
        with:
-         node-version: 16
+         node-version: 20
          # reposiroty url is npm not github
          registry-url: https://registry.npmjs.org/
+    
      - run: rm -rf package-lock.json node_modules
      - run: npm install
      - run: npm run build

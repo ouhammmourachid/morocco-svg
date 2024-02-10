@@ -17,7 +17,7 @@ export function Morocco() {
     return(
         <svg width="316" height="285" viewBox="0 0 316 285" fill="none" xmlns="http://www.w3.org/2000/svg">
             {paths.map((path, index) => (
-                <path d={path.path} fill={path.fill} />
+                <path d={path.d} fill={path.fill} />
             ))}
         </svg>
     )
