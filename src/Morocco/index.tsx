@@ -42,11 +42,11 @@ export function Morocco() {
                 <div style={
                     {
                         position: 'absolute', 
-                        top: tooltip.y+2, 
-                        left: tooltip.x+2,
+                        top: tooltip.y-10, 
+                        left: tooltip.x-10,
                         backgroundColor: 'purple',
                         color: 'white',
-                        fontSize: '6px'
+                        fontSize: '12px'
                     }
                 }>
                     {tooltip.name}
