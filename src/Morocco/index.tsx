@@ -39,7 +39,16 @@ export function Morocco() {
                 })}
             </svg>
             {tooltip && (
-                <div style={{position: 'absolute', top: tooltip.y+2, left: tooltip.x+2}}>
+                <div style={
+                    {
+                        position: 'absolute', 
+                        top: tooltip.y+2, 
+                        left: tooltip.x+2,
+                        backgroundColor: 'purple',
+                        color: 'white',
+                        fontSize: '6px'
+                    }
+                }>
                     {tooltip.name}
                 </div>
             )}
