@@ -42,8 +42,8 @@ export function Morocco() {
                 <div style={
                     {
                         position: 'absolute', 
-                        top: tooltip.y-10, 
-                        left: tooltip.x-10,
+                        top: tooltip.y-15, 
+                        left: tooltip.x-20,
                         backgroundColor: 'purple',
                         color: 'white',
                         fontSize: '12px'
