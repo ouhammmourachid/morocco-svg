@@ -2,10 +2,10 @@ name: deploy morocco-svg to npm
 
 # make this work flow manualy tragable
 on:
-  # workflow_dispatch:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+  # push:
+  #   branches:
+  #     - main
 
 
 
