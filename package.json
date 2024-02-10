@@ -10,6 +10,14 @@
     "build": "vite build && tsc"
   },
   "author": "rachid ouhammou",
+  "keywords": [
+    "morocco",
+    "svg",
+    "react",
+    "icon",
+    "map"
+  ],
+  "homepage": "https://github.com/ouhammmourachid/morocco-svg",
   "license": "MIT",
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
