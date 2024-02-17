@@ -37,7 +37,7 @@ export function Morocco() {
             <svg
                 width={541 * zoomLevel}
                 height={541 * zoomLevel}
-                viewBox={`0 0 ${541} ${541}`}
+                viewBox={`0 0 ${541 * zoomLevel} ${541 * zoomLevel}`}
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
             >
