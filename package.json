@@ -1,6 +1,6 @@
 {
   "name": "morocco-svg-map",
-  "version": "0.1.33",
+  "version": "0.1.34",
   "description": "",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
@@ -17,7 +17,7 @@
     "icon",
     "map"
   ],
-  "homepage": "https://github.com/ouhammmourachid/morocco-svg",
+  "homepage": "https://morocco-svg-map.vercel.app/",
   "license": "MIT",
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

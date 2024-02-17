@@ -4,7 +4,8 @@ import paths from './map';
 export function Morocco() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
     const [tooltip, setTooltip] = useState<{x: number, y: number, name: string} | null>(null);
-
+    const [zoomLevel, setZoomLevel] = useState<number>(1);
+    
     const handleMouseEnter = (index: number, event: React.MouseEvent<SVGPathElement>, name: string) => {
         setHoveredIndex(index);
         setTooltip({x: event.clientX, y: event.clientY, name: name});
@@ -21,9 +22,25 @@ export function Morocco() {
         setTooltip(null);
     };
 
+    const handleZoomIn = () => {
+        setZoomLevel(zoomLevel + 0.1);
+    };
+
+    const handleZoomOut = () => {
+        setZoomLevel(zoomLevel - 0.1);
+    };
+
     return(
         <div>
-            <svg width="541" height="541" viewBox="0 0 541 541" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <button onClick={handleZoomIn}>+</button>
+            <button onClick={handleZoomOut}>-</button>
+            <svg
+                width={541 * zoomLevel}
+                height={541 * zoomLevel}
+                viewBox={`0 0 ${541} ${541}`}
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
                 {paths.map((path, index) =>{
                     return(path.fill && (
                         <path
@@ -34,6 +51,7 @@ export function Morocco() {
                             onMouseMove={handleMouseMove}
                             onMouseLeave={handleMouseLeave}
                             stroke="white"
+                            transform={`scale(${zoomLevel})`}
                         />)
                     );
                 })}
